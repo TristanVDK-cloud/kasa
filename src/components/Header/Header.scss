@@ -1,0 +1,31 @@
+@use '../../styles/variables' as *;
+
+.header {
+    font-family: $main-font;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+    &__logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 3rem;
+
+        &-link {
+            text-decoration: none;
+            color: black;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
