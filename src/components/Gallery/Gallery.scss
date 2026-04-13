@@ -1,0 +1,14 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 50px;
+    background-color: #f6f6f6;
+    border-radius: 25px;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        padding: 0;
+        background-color: transparent;
+    }
+}

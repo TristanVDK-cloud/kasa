@@ -1,4 +1,8 @@
+import Gallery from "../components/Gallery";
+
 function Logement() {
-  return <div>Voici la liste des logements</div>;
+  return <div>
+    <Gallery />
+  </div>;
 }
 export default Logement;

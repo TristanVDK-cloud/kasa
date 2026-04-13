@@ -1,4 +1,7 @@
+@use './styles/variables' as *;
+
 .main-layout {
+    font-family: $main-font;
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 20px;
