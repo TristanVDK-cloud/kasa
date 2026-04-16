@@ -6,7 +6,10 @@ import imgHome from "../assets/banner_home.png";
 function Home() {
   return (
     <div>
-      <Banner image={imgHome} title="Chez vous, partout et ailleurs" origin="home" />
+      <Banner
+      image={imgHome}
+      title="Chez vous, partout et ailleurs"
+      origin="home" />
       <Gallery />
     </div>
   );

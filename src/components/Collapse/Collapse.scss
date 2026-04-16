@@ -1,0 +1,61 @@
+@use '../../styles/variables' as *;
+
+.collapse {
+    width: 100%;
+    margin-bottom: 30px;
+
+    &__header {
+        display: flex;
+        height: 50px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        border-radius: 5px;
+        background-color: rgba(255, 96, 96, 1);
+        cursor: pointer;
+    }
+
+    &__title {
+        color: white;
+    }
+
+    &__arrow {
+        width: 24px;
+        transition: transform 0.3s ease;
+
+        &.active {
+            transform: rotate(180deg);
+        }
+    }
+
+
+    &__content {
+        background-color: #F6F6F6;
+        padding: 20px;
+        border-radius: 0 0 5px 5px;
+        animation: slide-down 0.4s ease-out forwards;
+        transform-origin: top;
+
+        p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 140%;
+        }
+    }
+
+    @keyframes slide-down {
+        from {
+            transform: scaleY(0);
+            opacity: 0;
+        }
+        to {
+            transform: scaleY(1);
+            opacity: 1;
+        }
+    }
+}
+
+.about-container {
+    max-width: 1024px;
+    margin: 40px auto;
+}
