@@ -12,7 +12,7 @@ function About() {
       <div className="about-container">
         {aboutData.map((item) => (
           <Collapse
-          key={item}
+          key={item.id}
           title={item.title}
           content={item.description}
           />

@@ -1,0 +1,109 @@
+@use "/src/styles/variables" as *;
+
+.logement-header {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (min-width: 1024px) {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+
+    &__left {
+        margin-top: 20px;
+
+        h1 {
+            color: $primary-color;
+            font-size: 36px;
+            font-weight: 500;
+
+            @media screen and (max-width: 1023px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+        list-style: none;
+        padding: 0;
+
+        li {
+            background-color: $primary-color;
+            color: white;
+            padding: 5px 20px;
+            font-size: 14px;
+            min-width: 115px;
+            text-align: center;
+            border-radius: 10px;
+        }
+    }
+
+    .host {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+
+        &__name {
+            color: $primary-color;
+            font-size: 18px;
+            text-align: right;
+            width: min-content;
+        }
+
+        &__picture {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    .rating {
+        display: flex;
+        gap: 5px;
+
+        &__star {
+            width: 24px;
+            height: 24px;
+
+            @media screen and (max-width: 768px) {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+}
+
+.logement-collapses {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        align-items: flex-start;
+
+        & > {
+            flex: 1;
+        }
+    }
+}
