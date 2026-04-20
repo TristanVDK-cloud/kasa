@@ -1,0 +1,46 @@
+@use '../../styles/_variables.scss' as *;
+
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    min-height: 70vh;
+
+    &__title {
+        color: $primary-color;
+        font-size: 96px;
+        font-weight: 700;
+        // margin: 0;
+
+        @media screen and (min-width: 1024px) {
+            font-size: 288px;
+        }
+    }
+
+    &__message {
+        color: $primary-color;
+        margin-top: 10px;
+        font-size: 18px;
+
+        @media screen and (min-width: 1024px) {
+            font-size: 36px;
+            margin-top: 65px;
+        }
+    }
+
+    &__link {
+        color: black;
+        text-decoration: underline;
+        margin-top: 110px;
+        font-size: 14px;
+
+        @media screen and (min-width: 1024px) {
+            font-size: 18px;
+             margin-top: 140px;
+             margin-bottom: 100px;
+        }
+    }
+}
