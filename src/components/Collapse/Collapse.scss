@@ -1,33 +1,51 @@
 @use '../../styles/variables' as *;
 
+
 .collapse {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 30px;
+    }
 
     &__header {
         display: flex;
-        height: 50px;
+        height: 30px;
         justify-content: space-between;
         align-items: center;
         padding: 0 20px;
         border-radius: 5px;
-        background-color: rgba(255, 96, 96, 1);
+        background-color: $primary-color;
         cursor: pointer;
+
+        @media screen and (min-width: 1024px) {
+            height: 50px;
+
+        }
     }
 
     &__title {
         color: white;
+        font-size: 13px;
+
+        @media screen and (min-width: 1024px) {
+            font-size: 24px;
+        }
     }
 
     &__arrow {
-        width: 24px;
+        width: 16px;
         transition: transform 0.3s ease;
+
+        @media screen and (min-width: 1024px) {
+            width: 24px;
+        }
 
         &.active {
             transform: rotate(180deg);
         }
     }
-
 
     &__content {
         background-color: #F6F6F6;
@@ -38,24 +56,33 @@
 
         p {
             margin: 0;
-            font-size: 18px;
+            font-size: 12px;
             line-height: 140%;
-        }
-    }
 
-    @keyframes slide-down {
-        from {
-            transform: scaleY(0);
-            opacity: 0;
-        }
-        to {
-            transform: scaleY(1);
-            opacity: 1;
+            @media screen and (min-width: 1024px) {
+                font-size: 18px;
+            }
         }
     }
 }
 
 .about-container {
     max-width: 1024px;
-    margin: 40px auto;
+    margin: 20px auto;
+
+    @media screen and (min-width: 1024px) {
+        margin: 40px auto;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
 }

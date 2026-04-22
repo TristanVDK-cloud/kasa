@@ -1,9 +1,14 @@
 .card {
     position: relative;
-    height: 340px;
+    height: 255px;
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
+
+    @media screen and (min-width: 1024px) {
+        height: 340px;
+
+    }
 
     &__img {
         width: 100%;

@@ -1,15 +1,16 @@
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    padding: 50px;
+    grid-template-columns: (1fr);
+    gap: 20px;
+    padding: 0px;
     margin: 40px 0;
-    background-color: #f6f6f6;
     border-radius: 25px;
+    background-color: transparent;
 
-    @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
-        padding: 0;
-        background-color: transparent;
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        padding: 50px;
+        background-color: #f6f6f6;
     }
 }

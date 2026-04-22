@@ -3,16 +3,20 @@ import data from '../data/logements.json'
 import Slideshow from "../components/Slideshow";
 import Collapse from "../components/Collapse";
 import Rating from "../components/Rating";
+import Error from "./Error";
 import './../styles/pages/_logement.scss'
 
 
 function Logement() {
   const { id } = useParams();
   const logement = data.find((item) => item.id === id);
+  const nameParts = logement.host.name.split(' ');
 
 
   if (!logement) {
-    return <Navigate to="/404" />;
+    return (
+      <Error />
+    )
   }
 
   return (
@@ -30,7 +34,7 @@ function Logement() {
         </div>
         <div className="logement-header__right">
           <div className="host">
-            <span className="host__name">{logement.host.name}</span>
+            <span className="host__name">{nameParts[0]} <br /> {nameParts[1]}</span>
             <img src={logement.host.picture} alt={logement.host.name} className="host__picture"/>
           </div>
           <div className="rating">

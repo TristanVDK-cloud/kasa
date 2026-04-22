@@ -1,5 +1,11 @@
 @use './styles/variables' as *;
 
+* {
+     margin: 0;
+     padding: 0;
+    box-sizing: border-box;
+}
+
 .main-layout {
     font-family: $main-font;
     max-width: 1240px;
