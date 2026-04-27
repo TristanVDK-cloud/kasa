@@ -1,4 +1,4 @@
-import { useParams, Navigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import data from '../data/logements.json'
 import Slideshow from "../components/Slideshow";
 import Collapse from "../components/Collapse";
@@ -10,14 +10,14 @@ import './../styles/pages/_logement.scss'
 function Logement() {
   const { id } = useParams();
   const logement = data.find((item) => item.id === id);
-  const nameParts = logement.host.name.split(' ');
-
 
   if (!logement) {
     return (
       <Error />
     )
   }
+
+  const nameParts = logement.host.name.split(' ');
 
   return (
     <div className="logement-page">
@@ -35,10 +35,10 @@ function Logement() {
         <div className="logement-header__right">
           <div className="host">
             <span className="host__name">{nameParts[0]} <br /> {nameParts[1]}</span>
-            <img src={logement.host.picture} alt={logement.host.name} className="host__picture"/>
+            <img src={logement.host.picture} alt={logement.host.name} className="host__picture" />
           </div>
           <div className="rating">
-            <Rating score={logement.rating } />
+            <Rating score={logement.rating} />
           </div>
         </div>
       </div>
